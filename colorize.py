@@ -15,18 +15,23 @@ def closest_colour(requested_colour):
         min_colours[(rd + gd + bd)] = name
     return min_colours[min(min_colours.keys())]
 
-def get_colour_name(requested_colour):
+def closest_color_by_rgb(rgb_):
     try:
-        closest_name = webcolors.rgb_to_name(requested_colour)
+        closest_name = webcolors.rgb_to_name(rgb_)
     except ValueError:
-        closest_name = closest_colour(requested_colour)
+        closest_name = closest_colour(rgb_)
     return closest_name
 
-def group_duplicates(list_):
-	return {i:list_.count(i) for i in list_}
+def closest_color_by_hex(hex_):
+    rgb_ = hex_to_rgb(hex_)
+    try:
+        closest_name = webcolors.rgb_to_name(rgb_)
+    except ValueError:
+        closest_name = closest_colour(rgb_)
+    return closest_name
 
-def get_color_group(color_name):
-	color_name = color_name.lower()
+def color_group_by_hex(hex_):
+	color_name = closest_color_by_hex(hex_)
 
 	for color in color_groups_dict.keys():
 		if color_name == color:
@@ -35,3 +40,14 @@ def get_color_group(color_name):
 			for color_ in color_groups_dict[color]:
 				if color_name == color_:
 					return color
+
+def color_group_by_rgb(rgb_):
+    color_name = closest_color_by_rbg(rgb_)
+
+    for color in color_groups_dict.keys():
+        if color_name == color:
+            return color_name
+        else:
+            for color_ in color_groups_dict[color]:
+                if color_name == color_:
+                    return color
