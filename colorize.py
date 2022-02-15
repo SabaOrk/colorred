@@ -5,24 +5,6 @@ def hex_to_rgb(hex_):
 	hex_ = hex_.lstrip('#')
 	return tuple(int(hex_[i:i+2], 16) for i in (0, 2, 4))
 
-def get_color_names_list_by_industry(industry):
-	companies = api_views.get_by_industry_company(industry)
-
-	color_names_by_industry = []
-	main_color_groups_by_industry = []
-
-	for brand in companies:
-		brand_hex_colors = api_views.get_company_colors(brand)
-
-		for hex_ in brand_hex_colors:
-			if len(hex_) == 7 and '#' in hex_:
-				precise_color = get_colour_name(hex_to_rgb(hex_))
-				color_names_by_industry.append(precise_color)
-				main_color_groups_by_industry.append(get_color_group_name(precise_color))
-
-	return main_color_groups_by_industry
-
-
 def closest_colour(requested_colour):
     min_colours = {}
     for key, name in webcolors.CSS3_HEX_TO_NAMES.items():
