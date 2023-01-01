@@ -1,7 +1,7 @@
 # COLORRED
 colorred is a python module that can name every HEX or RGB color as accurately as possible.
 
-![html-color-codes-color-palette-generators-hero](https://user-images.githubusercontent.com/47318592/210151333-a15b0256-4b82-4728-8320-c44b23dbf2bd.jpg)
+![pasted image 0](https://user-images.githubusercontent.com/47318592/210171733-1eef07e3-c908-47ec-97cf-4cfb45a8a54b.png)
 
 # USING COLORRED:
 
@@ -34,4 +34,17 @@ white
 white
 ```
 `closest_color_by_rgb` or `closest_color_by_hex` returns more specific color names
-you can see all of the available named colors in todays [HTML Color Names](https://www.w3schools.com/colors/colors_names.asp) 
+you can see all of the available named colors in todays css [HTML Color Names](https://www.w3schools.com/colors/colors_names.asp) 
+
+```
+from colorred_py.colorize import closest_color_by_hex
+
+color_name1 = closest_color_by_hex('#ff00ff')
+
+print(color_name1)
+```
+output:
+```
+magenta
+```
+
