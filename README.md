@@ -3,6 +3,13 @@ colorred is a python module that can name every HEX or RGB color as accurately a
 
 ![pasted image 0](https://user-images.githubusercontent.com/47318592/210171733-1eef07e3-c908-47ec-97cf-4cfb45a8a54b.png)
 
+#INSTALLATION
+
+installing colorred_py with pip
+```
+pip install colorred_py
+```
+
 # USING COLORRED:
 
 there are couple of ways to use colorred. first one is to convert hex or rgb to a color group
