@@ -1,5 +1,5 @@
 # COLORRED
-colorred is a python module that can name every HEX or RGB color as accurately as possible.
+colorred is a python module that can name every HEX or RGB color code as accurately as possible.
 
 ![pasted image 0](https://user-images.githubusercontent.com/47318592/210171733-1eef07e3-c908-47ec-97cf-4cfb45a8a54b.png)
 
