@@ -16,6 +16,7 @@ there are couple of ways to use colorred. first one is to convert hex or rgb to 
 - **WHITE**
 - **BLACK**
 - **RED**
+- **BLUE**
 - **BROWN**
 - **GREEN**
 - **YELLOW**
@@ -27,7 +28,7 @@ there are couple of ways to use colorred. first one is to convert hex or rgb to 
 
 you can call `color_group_by_rgb` or `color_group_by_hex`
 ```
-from colorred_py.colorize import color_group_by_hex
+from colorred_py.colorize import color_group_by_hex, color_group_by_rgb
 
 color_name1 = color_group_by_hex('#fff232')
 color_name2 = color_group_by_rgb((255, 242, 50))
